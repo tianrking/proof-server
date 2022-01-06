@@ -25,6 +25,7 @@ type DBConfig struct {
 type PlatformConfig struct {
 	Twitter  TwitterPlatformConfig  `json:"twitter"`
 	Ethereum EthereumPlatformConfig `json:"ethereum"`
+	Discord  DiscordPlatformConfig  `json:"discord"`
 }
 
 type TwitterPlatformConfig struct {
@@ -36,6 +37,13 @@ type TwitterPlatformConfig struct {
 
 type EthereumPlatformConfig struct {
 	RPCServer string `json:"rpc_server"`
+}
+
+type DiscordPlatformConfig struct {
+	ApplicationID        string `json:"application_id"`
+	PublicKey            string `json:"public_key"`
+	BotToken             string `json:"bot_token"`
+	ProofServerChannelID string `json:"proof_server_channel_id"`
 }
 
 var (
